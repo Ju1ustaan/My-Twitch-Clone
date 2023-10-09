@@ -1,0 +1,112 @@
+.home {
+    padding: 10em;
+}
+
+.home__desc {
+    min-height: calc(100vh - 20em);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home__title {
+    position: relative;
+    font-size: 3em;
+    font-weight: 700;
+    color: #FFF;
+    z-index: 1;
+}
+.home__title::after {
+    position: absolute;
+    content: 'My Twitch Clone';
+    width: 100%;
+    left: 4px;
+    top: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: red;
+    z-index: -1;
+}
+
+.home__title::before {
+    position: absolute;
+    content: 'My Twitch Clone';
+    width: 100%;
+    left: -4px;
+    top: -4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: blue;
+    z-index: -1;
+}
+
+.home__title-flex::after {
+    position: absolute;
+    content: '#My Twitch Clone #My Twitch Clone #My Twitch Clone #My Twitch Clone #My Twitch Clone';
+    width: 100%;
+    left: 4px;
+    top: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: red;
+    z-index: -1;
+}
+
+.home__title-flex::before {
+    position: absolute;
+    content: '#My Twitch Clone #My Twitch Clone #My Twitch Clone #My Twitch Clone #My Twitch Clone';
+    width: 100%;
+    left: -4px;
+    top: -4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: blue;
+    z-index: -1;
+}
+
+.home__intro {
+    font-size: 3.5em;
+
+}
+
+.home__animation {
+    margin: 0 auto;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.home__flex {
+    display: flex;
+    width: 180%;
+}
+
+.home__title-flex {
+    width: 100%;
+    white-space: nowrap;
+    animation: ticker 5s linear infinite;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.home__title-reverse {
+    width: 100%;
+    white-space: nowrap;
+    animation: reverse-infinity 5s linear infinite;
+}
+
+@keyframes reverse-infinity {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

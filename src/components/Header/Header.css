@@ -1,0 +1,94 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    max-width: 2500px;
+    width: 100%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2em;
+    background-color: #1e1b39bf;
+    z-index: 2;
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    position: relative;
+    font-size: 3em;
+    font-weight: 700;
+    color: #a970ff;
+    z-index: 1;
+}
+
+.header__logo::after {
+    position: absolute;
+    content: 'MY TWITCH CLONE';
+    width: 100%;
+    left: 4px;
+    top: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: red;
+    z-index: -1;
+}
+
+.header__logo::before {
+    position: absolute;
+    content: 'MY TWITCH CLONE';
+    width: 100%;
+    left: -4px;
+    top: -4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: blue;
+    z-index: -1;
+}
+
+.header__link {
+    position: relative;
+    margin-left: 2em;
+    font-size: 2em;
+    font-weight: 500;
+    color: #fff;
+    z-index: 1;
+}
+
+.header__link::after {
+    position: absolute;
+    content: 'Популярное';
+    width: 100%;
+    left: 4px;
+    top: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: red;
+    z-index: -1;
+}
+
+.header__link::before {
+    position: absolute;
+    content: 'Популярное';
+    width: 100%;
+    left: -4px;
+    top: -4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: blue;
+    z-index: -1;
+}
+
+.header__inp {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 1.5em;
+    background-color: transparent;
+    border: 1px solid #a970ff;
+    width: 500px;
+    color: #fff;
+    font-size: 1.4em;
+}
