@@ -1,0 +1,15 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination__btn {
+    padding: 1em;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.pagination__btn:hover {
+    color: rgb(169, 112, 255);
+}

@@ -1,6 +1,14 @@
+.popular {
+  padding: 144px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .popular__wrapper {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    padding-top: 144px;
   }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto:wght@400;500;700;900&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -43,3 +43,122 @@ p {
   padding: 0 15px;
 }
 
+.loader {
+  position: relative;
+  -webkit-text-stroke: 1px #1e1b39;
+}
+
+.loader::before{
+  position: absolute;
+  content: 'Загрузка...';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  color: rgb(169, 112, 255);
+  overflow: hidden;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+  0%{
+    width: 0;
+  }
+  70%{
+    width: 100%;
+  }
+}
+
+
+/* стили для Логина */
+
+.login {
+  width: 100%;
+  height: 100vh;
+}
+
+.login__wrapper {
+  position: relative;
+  padding: 50px 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(45%, 500px);
+  background: blue;
+}
+
+.login__wrapper::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: red;
+  left: 8px;
+  top: 8px;
+  z-index: -99;
+}
+
+.login__wrapper::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #a970ff;
+  left: 4px;
+  top: 4px;
+  z-index: -99;
+}
+
+.login__title {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffff;
+}
+
+.login__title::after {
+  position: absolute;
+  content: 'Авторизация';
+  width: 100%;
+  left: 4px;
+  top: 4px;
+  font-size: 1em;
+  font-weight: 700;
+  color: red;
+  z-index: -1;
+}
+
+.login__title::before {
+  position: absolute;
+  content: 'Авторизация';
+  width: 100%;
+  left: -4px;
+  top: -4px;
+  font-size: 1em;
+  font-weight: 700;
+  color: blue;
+  z-index: -1;
+}
+
+.login__form {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__inp {
+  padding: .8em;
+  margin-bottom: 2rem;
+}
+
+.login__btn {
+  padding: .8em;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #ffff;
+  cursor: pointer;
+  background: linear-gradient(0deg, rgb(169, 112, 255) 0%, rgba(129, 5, 240, 1) 100%);
+}

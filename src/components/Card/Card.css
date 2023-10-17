@@ -1,6 +1,6 @@
 .card {
     flex-grow: 1;
-    flex-basis: 500px;
+    flex-basis: 300px;
     position: relative;
     background: transparent;
     overflow: hidden;
@@ -9,7 +9,7 @@
 
 .card__img {
     width: 100%;
-    max-height: 410px ;
+    max-height: 250px ;
     cursor: pointer;
     overflow: hidden;
 }
@@ -34,7 +34,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .4rem 1.5em .4rem 0;
 }
 
 .card__started-at {
@@ -71,9 +70,23 @@
 }
 
 .card__game {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 500;
     letter-spacing: .06em;
+}
+
+.fa-angle-up,
+.fa-angle-down {
+    font-size: 1.2em;
+    color: #b9b9b9;
+    cursor: pointer;
+}
+.fa-angle-down {
+    color: #FFF;
+}
+.fa-angle-up:hover,
+.fa-angle-down:hover {
+    color: #a970ff;
 }
 
 .card__tag-list {
@@ -82,9 +95,11 @@
 }
 
 .card__tag {
+    flex-grow: 1;
+    flex-basis: 50px;
+    text-align: center;
     padding: .5em;
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin-bottom: .4em;
     border-radius: 50px;
     font-size: .8em;
     color: rgb(166, 165, 165);
@@ -99,11 +114,10 @@
 }
 
 .card__title {
-    color: rgb(166, 165, 165);
-    font-size: 2em;
+    color: #FFF;
+    font-size: 1.3em;
     font-weight: 900;
     letter-spacing: .1em;
-    max-height: 4em;
     overflow: hidden;
     cursor: pointer;
 }
@@ -115,7 +129,29 @@
 }
 
 .card__user {
-    font-size: 1.5em;
+    color: #a970ff;
+    font-size: 1.3em;
     font-weight: 700;
     cursor: pointer;
+}
+
+/* accardion style */
+
+.card__accardion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 .5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: all .5s linear;
+    background-color: rgb(169, 112, 255, .7);
+    backdrop-filter: blur(4px);
+}
+
+.open {
+    height: 100%;
 }

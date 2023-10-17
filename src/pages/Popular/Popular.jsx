@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import Card from "../../components/Card/Card";
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom' 
+import { getVideos } from '../../redux/actions';
+import Card from "../../components/Card/Card";
 import './Popular.css'
+import Pagination from '../../components/Pagination/Pagination';
 
 const Popular = () => {
-  const navigate = useNavigate()
   const dispatch = useDispatch()
-  const videos = useSelector(state => state?.videoList)
-
-  const handleClick = () => {
-    navigate('/stream')
-    dispatch({type: 'CHANNEL_ID', payload: item.user_id})
-}
+  const videos = useSelector(state => state.videoList)
+  const loader = useSelector(state => state.loader)
   
   useEffect(() => {
     dispatch(getVideos())
@@ -22,12 +18,14 @@ const Popular = () => {
       <div className='container'>
         <div className="popular__wrapper">
           {
+            loader ? <span className='stream__empty-text loader'>Загрузка...</span> :
             videos && videos.map((item) => (
-              <Card key={item.title} item={item} handleClick={handleClick}/>
+              <Card key={item.title} item={item} />
             ))
           }
         </div>
       </div>
+        <Pagination/>
     </div>
   )
 }

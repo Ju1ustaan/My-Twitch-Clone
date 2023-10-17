@@ -84,7 +84,7 @@
 .home__title-flex {
     width: 100%;
     white-space: nowrap;
-    animation: ticker 5s linear infinite;
+    animation: ticker 15s linear infinite;
 }
 
 @keyframes ticker {
@@ -99,7 +99,7 @@
 .home__title-reverse {
     width: 100%;
     white-space: nowrap;
-    animation: reverse-infinity 5s linear infinite;
+    animation: reverse-infinity 15s linear infinite;
 }
 
 @keyframes reverse-infinity {
@@ -109,4 +109,11 @@
     100% {
         transform: translateX(0%);
     }
+}
+.rotate{
+    transform: rotate(2deg);
+}
+
+.rotate2{
+    transform: rotate(-3deg);
 }

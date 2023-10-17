@@ -1,8 +1,64 @@
 .stream {
-    padding-top: 10em;
+    padding: 10em 0;
+    text-align: center;
 }
 
 .stream__wrapper {
-    width: 70%;
-    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
 }
+
+.stream__player {
+    width: 50%;
+    background: url('https://pbs.twimg.com/media/FpKzlBSXsAAgqBV.jpg:large') center;
+    background-size: cover;
+}
+
+.stream__highlight {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.stream__title {
+    font-size: 5em;
+    font-weight: 700;
+    color: #FFFF;
+}
+
+.stream__lang {
+    text-align: end;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: .5rem;
+    border-radius: 50px;
+    background-color: rgb(88, 88, 88);
+}
+
+.stream__empty {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.stream__empty-text {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stream__empty-img {
+    width: 100px;
+    height: 100px;
+}
+
+.stream__empty-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

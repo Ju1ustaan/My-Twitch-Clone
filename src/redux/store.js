@@ -1,19 +1,32 @@
 import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
 const initialState = {
-    videoList: {},
+    videoList: [],
     chanelId: 0,
-    stream: '',
+    highlight: [],
+    loader: false,
+    pagination: '',
+    userLogin: '',
+    user: {}
 }
 
 const contentReducer = (state = initialState, action) => {
     switch(action.type){
-        case 'CHANNEL_ID':
-            return {...state, videoList: action.payload}
         case 'GET_POPULAR':
-            return {...state, chanelId: action.payload}
-        case 'GET_STREAM':
-            return {...state, stream: action.payload}
+            return {...state, videoList: action.payload }
+        case 'CHANNEL_ID':
+            return {...state, chanelId: action.payload }
+        case 'GET_HIGHLIGHT':
+            return {...state, highlight: action.payload }
+        case 'SHOW_LOADER':
+            return {...state, loader: action.payload }
+        case 'USER_LOGIN':
+            return {...state, userLogin: action.payload }
+        case 'GET_USER':
+            return {...state, user: action.payload }
+        case 'SET_PAGINATION':
+            return {...state, pagination: action.payload }
         default:
             return state
     }
